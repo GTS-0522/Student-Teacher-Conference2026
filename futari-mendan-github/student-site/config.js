@@ -1,5 +1,0 @@
-window.MENDAN_CONFIG = {
-  GAS_WEB_APP_URL: "ここにGASのウェブアプリURLを貼り付け",
-  REFRESH_INTERVAL_MS: 30000
-};
-
