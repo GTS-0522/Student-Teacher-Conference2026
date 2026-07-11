@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#17365d">
+  <meta name="description" content="二者面談の希望日時入力フォーム">
+  <title>希望日時入力｜二者面談</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="request">
+  <header class="app-header simple">
+    <div class="brand">
+      <span class="brand-icon" aria-hidden="true">✎</span>
+      <div>
+        <p class="eyebrow">REQUEST</p>
+        <h1>希望日時入力</h1>
+      </div>
+    </div>
+  </header>
+
+  <main class="form-page-shell">
+    <a class="back-link" href="index.html"><span aria-hidden="true">←</span> 日程確認に戻る</a>
+
+    <section class="form-card" id="requestFormCard">
+      <p class="section-kicker">INTERVIEW REQUEST</p>
+      <h2>面談の希望を教えてください</h2>
+      <p class="form-lead">候補を複数書いていただくと、日程を調整しやすくなります。</p>
+
+      <form id="requestForm" novalidate>
+        <label class="field">氏名 <span class="required-mark">必須</span>
+          <input id="requestName" name="name" type="text" maxlength="50" autocomplete="name" placeholder="例：2年3組 佐藤 花子" required>
+        </label>
+        <label class="field">希望日時 <span class="required-mark">必須</span>
+          <textarea id="requestDates" name="preferredDates" rows="7" maxlength="800" placeholder="例：&#10;第1希望　8月18日（火）10:00〜&#10;第2希望　8月20日（木）13:30〜&#10;第3希望　8月21日（金）午前中" required></textarea>
+        </label>
+        <p class="privacy-note">入力内容は、面談の日程調整にのみ使用します。</p>
+        <p class="form-error" id="requestError" role="alert"></p>
+        <button class="primary-button full-width" id="submitRequest" type="submit">送信する</button>
+      </form>
+    </section>
+
+    <section class="success-card" id="successCard" hidden>
+      <div class="success-icon" aria-hidden="true">✓</div>
+      <p class="section-kicker">COMPLETE</p>
+      <h2>送信ありがとうございます！</h2>
+      <p>希望日時を受け付けました。先生からの連絡をお待ちください。</p>
+      <a class="primary-button full-width" href="index.html">ホームに戻る</a>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
